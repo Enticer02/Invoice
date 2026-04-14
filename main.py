@@ -11,7 +11,7 @@ with st.expander("Invoice Details", expanded=True):
     col1, col2, col3 = st.columns(3)
     with col1:
         # Added Document Type Dropdown
-        doc_type = st.selectbox("Document Type", ["Quotation", "Proforma Invoice"])
+        doc_type = st.selectbox("Document Type", ["Quotation", "Tax Invoice"])
         client_name = st.text_input("Client Name", "ASTRAL PIPES LTD")
         client_gst = st.text_input("Client GST Number", "24XXXXXXXXXXXXZ1")
     with col2:
@@ -83,8 +83,8 @@ class RiddhiPDF(FPDF):
             self.cell(0, 7, 'RIDDHI HARDWARE', align='C', ln=True)
             
             self.set_font('helvetica', '', 8)
-            self.cell(0, 4, 'G-9 Swastik Apartment, Jivrajpark, Ahmedabad-380051', align='C', ln=True)
-            self.cell(0, 4, 'Contact: +91 99999 99999 | Email: contact@riddhihardware.com', align='C', ln=True)
+            self.cell(0, 4, 'G-9 Swastik Apartment, opposite Bank of Baroda, Jivrajpark, Ahmedabad-380051', align='C', ln=True)
+            self.cell(0, 4, 'Contact: 8866663390 | Email: riddhihardware313@gmail.com', align='C', ln=True)
             self.ln(3)
             
             curr_y = self.get_y()
